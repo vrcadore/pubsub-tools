@@ -1,0 +1,59 @@
+site_name: PubSub Helper Tools
+
+repo_url: https://github.com/vrcadore/pubsub-tools
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/logo-symbol-light.png
+  favicon: assets/favicon.icon
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+plugins:
+  - search
+  - markdown-exec
+  - mkdocstrings:
+      handlers:
+        python:
+          selection:
+            docstring_style: google
+
+nav:
+  - Usage:
+      - Home: index.md
+      - usage/get_started.md
+      - usage/cli_reference.md
+  - Development:
+      - dev/contributing.md
+      - dev/changelog.md
+
+markdown_extensions:
+  - mkdocs-click
+  - admonition
+  - tables
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - markdown_include.include:
+      base_path: docs
+  - pymdownx.details
+
+copyright: Copyright &copy; 2022 <a href="https://viniciuscadore.com">Vinicius Cadore</a>
